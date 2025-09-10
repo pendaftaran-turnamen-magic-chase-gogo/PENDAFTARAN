@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Turnamen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1 class="title">Pendaftaran Turnamen Esport</h1>
+      <p class="subtitle">Isi data dengan benar lalu upload bukti transfer</p>
+    </div>
+
+    <div class="card form-card">
+      <form id="registerForm">
+        <div class="field">
+          <span>ID Game</span>
+          <input type="text" id="gameId" placeholder="Masukkan ID Game">
+        </div>
+
+        <div class="field">
+          <span>Username</span>
+          <input type="text" id="username" placeholder="Masukkan Username">
+        </div>
+
+        <div class="field">
+          <span>No WhatsApp</span>
+          <input type="text" id="waNumber" placeholder="+6212345678910">
+        </div>
+
+        <div class="fees">
+          <span class="label-fee">💰 Biaya Pendaftaran</span>
+          <div class="fee-buttons">
+            <div class="fee-btn small" data-fee="10000">🟢 Kecil<br>Rp10.000</div>
+            <div class="fee-btn medium" data-fee="50000">🔵 Sedang<br>Rp50.000</div>
+            <div class="fee-btn pro" data-fee="100000">🟡 Pro<br>Rp100.000</div>
+            <div class="fee-btn master" data-fee="1000000">🔴 Master<br>Rp1.000.000</div>
+          </div>
+          <div id="summary" class="summary">
+            Pemain yang menang akan mendapatkan <strong>40%</strong> dari total biaya pendaftaran.
+          </div>
+        </div>
+
+        <div class="pay-proof">
+          <span>Upload Bukti Transfer</span>
+          <input type="file" id="proofFile" accept="image/*">
+        </div>
+
+        <div class="actions">
+          <button type="button" class="primary" id="btnPay">Bayar</button>
+          <button type="button" class="secondary" id="btnSendProof">Kirim Bukti TF</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal QR -->
+  <div class="modal" id="qrModal">
+    <div class="modal-content">
+      <button class="close" id="closeQr">&times;</button>
+      <img src="qr.png" alt="QR Pembayaran">
+      <p class="qr-note">Jangan lupa screenshot untuk kirim bukti TF</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
